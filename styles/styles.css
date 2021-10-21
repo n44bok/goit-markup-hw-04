@@ -152,7 +152,7 @@ section {
 }
 
 .link-header:hover .contacts-icon,
-.link-header:hover .contacts-icon {
+.link-header:focus .contacts-icon {
   fill: var(--accent-color);
 }
 
@@ -163,6 +163,8 @@ section {
 
 /*---------- Hero -------------*/
 .overlay {
+  padding-top: 200px;
+  padding-bottom: 200px;
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
@@ -174,20 +176,17 @@ section {
     url(../images/hero.jpg);
 
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero {
   text-align: center;
   padding-top: 0;
-  padding-bottom: 0;
 }
 
 .hero-title {
-  padding-top: 200px;
-  margin-top: 0;
   margin-bottom: 30px;
-
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -197,7 +196,6 @@ section {
 }
 
 .button-hero {
-  padding-bottom: 200px;
   text-align: center;
   padding: 10px 32px 10px 32px;
   border: none;
@@ -334,6 +332,7 @@ section {
 .team-list .item {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: var(--white-text-color);
 }
 
 .social-list {
@@ -343,11 +342,13 @@ section {
 }
 
 .social-icons {
+  display: block;
   width: 44px;
   height: 44px;
   padding: 12px;
   color: #afb1b8;
   cursor: pointer;
+  align-items: center;
 }
 
 .social-icon {
@@ -368,6 +369,10 @@ section {
 
 .social-list .social-icons:not(:last-child) {
   margin-right: 10px;
+}
+
+.team-section {
+  background-color: #f5f4fa;
 }
 
 /*---------- clients ------------*/
@@ -396,11 +401,13 @@ section {
   fill: #afb1b8;
 }
 
-.clients-icon:hover .icon-company {
+.clients-icon:hover .icon-company,
+.clients-icon:focus .icon-company {
   fill: var(--accent-color);
 }
 
-.clients-icon:hover {
+.clients-icon:hover,
+.clients-icon:focus {
   border: 1px solid var(--accent-color);
   fill: var(--accent-color);
 }
@@ -408,14 +415,16 @@ section {
 /*---------- footer -------------*/
 
 footer {
+  background-color: #2f303a;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-list {
   padding-top: 60px;
   padding-bottom: 60px;
   display: flex;
-  background-color: #2f303a;
-  max-width: 1600px;
-  height: 252px;
-  margin-left: auto;
-  margin-right: auto;
+  align-items: baseline;
 }
 
 .logo-footer {
@@ -467,14 +476,8 @@ footer {
   color: var(--accent-color);
 }
 
-.main-footer {
-  padding-left: 215px;
+.contacts-footer {
   margin-right: 70px;
-}
-
-.join-section {
-  text-align: left;
-  padding-top: 15px;
 }
 
 .join-section-title {
@@ -488,11 +491,12 @@ footer {
 }
 
 .social-list-footer {
-  text-align: left;
   display: flex;
 }
 
 .social-icons-footer {
+  display: block;
+  text-align: center;
   width: 44px;
   height: 44px;
   padding: 12px;
@@ -500,14 +504,11 @@ footer {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+  margin-right: 10px;
 }
 
 .social-icon-footer {
   fill: var(--white-text-color);
-}
-
-.social-list-footer .social-icons-footer:not(:last-child) {
-  margin-right: 10px;
 }
 
 .social-icons-footer:hover,
